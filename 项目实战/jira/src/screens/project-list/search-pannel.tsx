@@ -1,6 +1,23 @@
-import { useState } from "react"
+// import { useState } from "react"
 
-export const SearchPannel = ({users,param,setParam})=>{
+export interface User{
+    id:string;
+    name:string;
+    email:string;
+    title:string;
+    organization:string;
+}
+
+interface SearchPannelProps{
+    users:User[],
+    param:{
+        name:string,
+        personId:string,
+    },
+    setParam:(param:SearchPannelProps['param']) => void;
+}
+
+export const SearchPannel = ({users,param,setParam}:SearchPannelProps)=>{
     
     return <form action="">
         <input type="text" value={param.name} onChange={evt=>setParam({
