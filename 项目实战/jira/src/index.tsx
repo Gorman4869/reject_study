@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { loadDevTools } from 'jira-dev-tool';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
+loadDevTools(()=>{
+  const root = ReactDOM.createRoot(
+    document.getElementById('root') as HTMLElement
+  );
+  root.render(
+  
+    <App />
+  );
+})
 
-  <App />
-);
 //<React.StrictMode>
     //去除严格模式 防止useEffect执行两次
 //</React.StrictMode>

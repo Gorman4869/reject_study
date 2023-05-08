@@ -1,0 +1,1 @@
+import { injectJsErorr } from "./lib/jsError";
